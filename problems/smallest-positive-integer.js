@@ -24,11 +24,7 @@ function solution(A) {
   // write your code in JavaScript (Node.js 8.9.4)
   // Delete de negative numbers, and then sort the array in increasin order
   A = A.filter(x => x > 0).sort((a, b) => a - b);
-  console.log(A);
-  if (A.length === 0 || A[A.length] < 1) {
-    return -1;
-  }
-  
+
   A.forEach((e) => {
     // check for the restant number and if is missing in the array then is the smallest
     // because the array is sorted
@@ -40,4 +36,4 @@ function solution(A) {
   return res;
 }
 
-console.log(solution([1, 3, 6, 4, 1, 2]));
+console.log(solution([-1, -3]));
